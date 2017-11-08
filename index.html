@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+		<title>Faucet</title>
+		<!-- Path to Framework7 Library CSS-->
+		<style>
+			#overlay-preloader {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				height: 100%;
+				width: 100%;
+				background-color: #FFF;
+				z-index: 9999;
+				padding-top: 20vh;
+			}
+			#overlay-preloader h4 {
+				max-width: 90%;
+			}
+			.cssload-thecube {
+				width: 73px;
+				height: 73px;
+				margin: 0 auto;
+				margin-top: 49px;
+				position: relative;
+				transform: rotateZ(45deg);
+					-o-transform: rotateZ(45deg);
+					-ms-transform: rotateZ(45deg);
+					-webkit-transform: rotateZ(45deg);
+					-moz-transform: rotateZ(45deg);
+			}
+			.cssload-thecube .cssload-cube {
+				position: relative;
+				transform: rotateZ(45deg);
+					-o-transform: rotateZ(45deg);
+					-ms-transform: rotateZ(45deg);
+					-webkit-transform: rotateZ(45deg);
+					-moz-transform: rotateZ(45deg);
+			}
+			.cssload-thecube .cssload-cube {
+				float: left;
+				width: 50%;
+				height: 50%;
+				position: relative;
+				transform: scale(1.1);
+					-o-transform: scale(1.1);
+					-ms-transform: scale(1.1);
+					-webkit-transform: scale(1.1);
+					-moz-transform: scale(1.1);
+			}
+			.cssload-thecube .cssload-cube:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgb(43,160,199);
+				animation: cssload-fold-thecube 2.76s infinite linear both;
+					-o-animation: cssload-fold-thecube 2.76s infinite linear both;
+					-ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+					-webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+					-moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+				transform-origin: 100% 100%;
+					-o-transform-origin: 100% 100%;
+					-ms-transform-origin: 100% 100%;
+					-webkit-transform-origin: 100% 100%;
+					-moz-transform-origin: 100% 100%;
+			}
+			.cssload-thecube .cssload-c2 {
+				transform: scale(1.1) rotateZ(90deg);
+					-o-transform: scale(1.1) rotateZ(90deg);
+					-ms-transform: scale(1.1) rotateZ(90deg);
+					-webkit-transform: scale(1.1) rotateZ(90deg);
+					-moz-transform: scale(1.1) rotateZ(90deg);
+			}
+			.cssload-thecube .cssload-c3 {
+				transform: scale(1.1) rotateZ(180deg);
+					-o-transform: scale(1.1) rotateZ(180deg);
+					-ms-transform: scale(1.1) rotateZ(180deg);
+					-webkit-transform: scale(1.1) rotateZ(180deg);
+					-moz-transform: scale(1.1) rotateZ(180deg);
+			}
+			.cssload-thecube .cssload-c4 {
+				transform: scale(1.1) rotateZ(270deg);
+					-o-transform: scale(1.1) rotateZ(270deg);
+					-ms-transform: scale(1.1) rotateZ(270deg);
+					-webkit-transform: scale(1.1) rotateZ(270deg);
+					-moz-transform: scale(1.1) rotateZ(270deg);
+			}
+			.cssload-thecube .cssload-c2:before {
+				animation-delay: 0.35s;
+					-o-animation-delay: 0.35s;
+					-ms-animation-delay: 0.35s;
+					-webkit-animation-delay: 0.35s;
+					-moz-animation-delay: 0.35s;
+			}
+			.cssload-thecube .cssload-c3:before {
+				animation-delay: 0.69s;
+					-o-animation-delay: 0.69s;
+					-ms-animation-delay: 0.69s;
+					-webkit-animation-delay: 0.69s;
+					-moz-animation-delay: 0.69s;
+			}
+			.cssload-thecube .cssload-c4:before {
+				animation-delay: 1.04s;
+					-o-animation-delay: 1.04s;
+					-ms-animation-delay: 1.04s;
+					-webkit-animation-delay: 1.04s;
+					-moz-animation-delay: 1.04s;
+			}
+
+
+
+			@keyframes cssload-fold-thecube {
+				0%, 10% {
+					transform: perspective(136px) rotateX(-180deg);
+					opacity: 0;
+				}
+				25%,
+							75% {
+					transform: perspective(136px) rotateX(0deg);
+					opacity: 1;
+				}
+				90%,
+							100% {
+					transform: perspective(136px) rotateY(180deg);
+					opacity: 0;
+				}
+			}
+
+			@-o-keyframes cssload-fold-thecube {
+				0%, 10% {
+					-o-transform: perspective(136px) rotateX(-180deg);
+					opacity: 0;
+				}
+				25%,
+							75% {
+					-o-transform: perspective(136px) rotateX(0deg);
+					opacity: 1;
+				}
+				90%,
+							100% {
+					-o-transform: perspective(136px) rotateY(180deg);
+					opacity: 0;
+				}
+			}
+
+			@-ms-keyframes cssload-fold-thecube {
+				0%, 10% {
+					-ms-transform: perspective(136px) rotateX(-180deg);
+					opacity: 0;
+				}
+				25%,
+							75% {
+					-ms-transform: perspective(136px) rotateX(0deg);
+					opacity: 1;
+				}
+				90%,
+							100% {
+					-ms-transform: perspective(136px) rotateY(180deg);
+					opacity: 0;
+				}
+			}
+
+			@-webkit-keyframes cssload-fold-thecube {
+				0%, 10% {
+					-webkit-transform: perspective(136px) rotateX(-180deg);
+					opacity: 0;
+				}
+				25%,
+							75% {
+					-webkit-transform: perspective(136px) rotateX(0deg);
+					opacity: 1;
+				}
+				90%,
+							100% {
+					-webkit-transform: perspective(136px) rotateY(180deg);
+					opacity: 0;
+				}
+			}
+
+			@-moz-keyframes cssload-fold-thecube {
+				0%, 10% {
+					-moz-transform: perspective(136px) rotateX(-180deg);
+					opacity: 0;
+				}
+				25%,
+							75% {
+					-moz-transform: perspective(136px) rotateX(0deg);
+					opacity: 1;
+				}
+				90%,
+							100% {
+					-moz-transform: perspective(136px) rotateY(180deg);
+					opacity: 0;
+				}
+			}
+		</style>
+		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.min.css">
+		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.colors.min.css">
+		<!-- Path to your custom app styles-->
+		<link rel="stylesheet" href="static/my-styles.css">
+		
+	</head>
+	<body onload="onLoad()" class="theme-indigo">
+		<div id="overlay-preloader">
+			<div class="cssload-thecube">
+				<div class="cssload-cube cssload-c1"></div>
+				<div class="cssload-cube cssload-c2"></div>
+				<div class="cssload-cube cssload-c4"></div>
+				<div class="cssload-cube cssload-c3"></div>
+			</div>
+			<div align="center" style="padding: 20px 0;">
+				<img class="sad" style="display: none;" src="static/emoji.png" alt="" width="45%">
+				<h4>Loading..</h4>
+				<button class="button button-fill" style="display: none;">Try Again</button>
+			</div>
+		</div>
+		<div class="statusbar-overlay"></div>
+		<div class="panel-overlay"></div>
+		<!-- Panel -->
+		<div class="panel panel-left panel-cover">
+			<div class="view navbar-fixed">
+				<div class="pages">
+					<div data-page="panel-left" class="page">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<div class="center">Dogefaucet</div>
+							</div>
+						</div>
+						<div class="page-content">
+							<div class="content-block">
+								<span class="color-gray">Current Earnings</span>
+								<h3 class="no-margin earningValue">0 DOGE</h3>
+							</div>
+							<div class="list-block">
+								<ul>
+									<li><a href="news.html" class="item-link close-panel">
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title">News</div>
+												</div>
+											</div>
+									</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Views-->
+		<div class="views">
+			<!-- Your main view, should have "view-main" class-->
+			<div class="view view-main">
+				<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- Page, data-page contains page name-->
+					<div data-page="index" class="page toolbar-fixed navbar-fixed">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<!-- We have home navbar without left link-->
+								<div class="center sliding">Dogefaucet v2.5</div>
+								<div class="right">
+									<!-- Right link contains only icon - additional "icon-only" class-->
+									<a href="#" class="link icon-only refresh-data" style="display: none;"> <i class="icon f7-icons icon-refresh"></i></a>
+									<a href="#" class="link icon-only open-panel"> <i class="icon f7-icons icon-bars"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="toolbar tabbar">
+							<div class="toolbar-inner">
+								<a href="#faucet" class="active tab-link">Faucet</a>
+								<a href="#withdrawal" class="tab-link">Withdrawal</a>
+								<a href="#history" class="tab-link">History</a>
+							</div>
+						</div>
+						<div class="tabs-animated-wrap">
+							<div class="tabs">
+								<div id="faucet" class="page-content tab active pull-to-refresh-content" data-ptr-distance="55">
+									<div class="pull-to-refresh-layer">
+										<div class="preloader"></div>
+										<div class="pull-to-refresh-arrow"></div>
+									</div>
+									<div class="content-block tiny-content" style="padding-top: 5%;">
+										<div class="content-block" align="center">
+											<h1 class="no-margin earningValue">0 DOGE</h1>
+											<h2 class="no-margin color-gray earningValueDollar">$ 0</h2>
+											<br>
+											<button id="doClaim" class="button button-raised button-fill button-big disabled">Claim Now</button>
+
+											<input id="addressInput" type="hidden"/>
+										</div>
+										<br>
+										<div class="menu-bottom toolbar-bottom row">
+											<div class="col-6">
+												<div class="card-content">
+													<div class="content-block tiny">
+														<p>Referral Earn <span id="helpRefComission" class="help">?</span></p>
+														<h1 class="no-margin earningRefValue">0 D</h1>
+													</div>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="">
+													<div class="card-content">
+														<div class="content-block tiny">
+															<p>Referral Code <span id="helpRefCode" class="help">?</span></p>
+															<h1 class="no-margin referralCode"></h1>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="withdrawal" class="page-content tab">
+									<div class="content-block tiny-content">
+										<div class="card">
+											<div class="card-header">Request Withdrawal</div>
+											<div class="card-content">
+												<div class="content-block">
+													<p>Minimum withdrawal is <span id="wdMin"></span> DOGE. Withdrawal Fee is <span id="wdFee"></span> DOGE</p>
+												</div>
+												<div class="list-block inputs-list">
+													<ul>
+														<li>
+															<div class="item-content">
+																<div class="item-inner"> 
+																	<div class="item-title label">Amount</div>
+																	<div class="item-input">
+																		<input type="text" id="amountWd"/>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="item-content">
+																<div class="item-inner"> 
+																	<div class="item-title label">Estimated Receive</div>
+																	<div class="item-input disabled">
+																		<input type="text" id="estimatedReceived"/>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="item-content">
+																<div class="item-inner" align="right">	
+																	<button id="doWithdrawal" class="button button-raised button-fill no-fastclick">Send Request</button>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="content-padding">
+													<small><span class="badge bg-orange">Attention</span> All Withdrawal requests are processed automatically immediantely after submitting a withdrawal request.</small>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="history" class="page-content tab pull-to-refresh-content" data-ptr-distance="55">
+									<div class="pull-to-refresh-layer">
+										<div class="preloader"></div>
+										<div class="pull-to-refresh-arrow"></div>
+									</div>
+									<div class="content-block tiny-content">
+										<div class="data-table data-table-init card">
+											<div class="card-header">
+												<div class="data-table-title">Earning</div>
+											</div>
+											<div class="card-content">
+												<table>
+													<thead>
+														<tr>
+															<th class="label-cell">#</th>
+															<th class="label-cell">Amount</th>
+															<th class="label-cell">Time</th>
+														</tr>
+													</thead>
+													<tbody id="tableEarning">
+													
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<br>
+										<div class="data-table data-table-init card">
+											<div class="card-header">
+												<div class="data-table-title">Withdrawal</div>
+											</div>
+											<div class="card-content">
+												<table>
+													<thead>
+														<tr>
+															<th class="label-cell">#</th>
+															<th class="label-cell">Status</th>
+															<th class="label-cell">Detail</th>
+														</tr>
+													</thead>
+													<tbody id="withdrawalTable">
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Path to Framework7 Library JS-->
+		<script type="text/javascript" src="vendors/framework7/dist/js/framework7.min.js"></script>
+		<script type="text/javascript" src="vendors/nyanStorage/nyanStorage.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+		<!-- Path to your app js-->
+		
+		<script type="text/javascript" src="static/app.js"></script>
+	</body>
+</html>

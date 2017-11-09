@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.dogefaucet.indigo"
-    versionCode = "1"
-    version     = "1.0.0" >
+    id          = "com.dogecoinfaucet.indigo"
+    versionCode = "2"
+    version     = "1.2.0" >
 
-  <name>Dogefaucet Indigo</name>
+  <name>DogecoinFaucet Indigo</name>
 
   <description>
-      Free Dogecoin every 2,5 minute's
+      Claim Dogecoin every 2.5 minute's
   </description>
 
   <author href="https://facebook.com/ryan.hac" email="ryandevstudio@gmail.com">

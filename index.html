@@ -8,7 +8,7 @@
 		
 		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
 
-		<title>Faucet</title>
+		<title>Dogefaucet</title>
 		<!-- Path to Framework7 Library CSS-->
 		<style>
 			#overlay-preloader {
@@ -24,200 +24,19 @@
 			#overlay-preloader h4 {
 				max-width: 90%;
 			}
-			.cssload-thecube {
-				width: 73px;
-				height: 73px;
-				margin: 0 auto;
-				margin-top: 49px;
-				position: relative;
-				transform: rotateZ(45deg);
-					-o-transform: rotateZ(45deg);
-					-ms-transform: rotateZ(45deg);
-					-webkit-transform: rotateZ(45deg);
-					-moz-transform: rotateZ(45deg);
-			}
-			.cssload-thecube .cssload-cube {
-				position: relative;
-				transform: rotateZ(45deg);
-					-o-transform: rotateZ(45deg);
-					-ms-transform: rotateZ(45deg);
-					-webkit-transform: rotateZ(45deg);
-					-moz-transform: rotateZ(45deg);
-			}
-			.cssload-thecube .cssload-cube {
-				float: left;
-				width: 50%;
-				height: 50%;
-				position: relative;
-				transform: scale(1.1);
-					-o-transform: scale(1.1);
-					-ms-transform: scale(1.1);
-					-webkit-transform: scale(1.1);
-					-moz-transform: scale(1.1);
-			}
-			.cssload-thecube .cssload-cube:before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgb(43,160,199);
-				animation: cssload-fold-thecube 2.76s infinite linear both;
-					-o-animation: cssload-fold-thecube 2.76s infinite linear both;
-					-ms-animation: cssload-fold-thecube 2.76s infinite linear both;
-					-webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
-					-moz-animation: cssload-fold-thecube 2.76s infinite linear both;
-				transform-origin: 100% 100%;
-					-o-transform-origin: 100% 100%;
-					-ms-transform-origin: 100% 100%;
-					-webkit-transform-origin: 100% 100%;
-					-moz-transform-origin: 100% 100%;
-			}
-			.cssload-thecube .cssload-c2 {
-				transform: scale(1.1) rotateZ(90deg);
-					-o-transform: scale(1.1) rotateZ(90deg);
-					-ms-transform: scale(1.1) rotateZ(90deg);
-					-webkit-transform: scale(1.1) rotateZ(90deg);
-					-moz-transform: scale(1.1) rotateZ(90deg);
-			}
-			.cssload-thecube .cssload-c3 {
-				transform: scale(1.1) rotateZ(180deg);
-					-o-transform: scale(1.1) rotateZ(180deg);
-					-ms-transform: scale(1.1) rotateZ(180deg);
-					-webkit-transform: scale(1.1) rotateZ(180deg);
-					-moz-transform: scale(1.1) rotateZ(180deg);
-			}
-			.cssload-thecube .cssload-c4 {
-				transform: scale(1.1) rotateZ(270deg);
-					-o-transform: scale(1.1) rotateZ(270deg);
-					-ms-transform: scale(1.1) rotateZ(270deg);
-					-webkit-transform: scale(1.1) rotateZ(270deg);
-					-moz-transform: scale(1.1) rotateZ(270deg);
-			}
-			.cssload-thecube .cssload-c2:before {
-				animation-delay: 0.35s;
-					-o-animation-delay: 0.35s;
-					-ms-animation-delay: 0.35s;
-					-webkit-animation-delay: 0.35s;
-					-moz-animation-delay: 0.35s;
-			}
-			.cssload-thecube .cssload-c3:before {
-				animation-delay: 0.69s;
-					-o-animation-delay: 0.69s;
-					-ms-animation-delay: 0.69s;
-					-webkit-animation-delay: 0.69s;
-					-moz-animation-delay: 0.69s;
-			}
-			.cssload-thecube .cssload-c4:before {
-				animation-delay: 1.04s;
-					-o-animation-delay: 1.04s;
-					-ms-animation-delay: 1.04s;
-					-webkit-animation-delay: 1.04s;
-					-moz-animation-delay: 1.04s;
-			}
-
-
-
-			@keyframes cssload-fold-thecube {
-				0%, 10% {
-					transform: perspective(136px) rotateX(-180deg);
-					opacity: 0;
-				}
-				25%,
-							75% {
-					transform: perspective(136px) rotateX(0deg);
-					opacity: 1;
-				}
-				90%,
-							100% {
-					transform: perspective(136px) rotateY(180deg);
-					opacity: 0;
-				}
-			}
-
-			@-o-keyframes cssload-fold-thecube {
-				0%, 10% {
-					-o-transform: perspective(136px) rotateX(-180deg);
-					opacity: 0;
-				}
-				25%,
-							75% {
-					-o-transform: perspective(136px) rotateX(0deg);
-					opacity: 1;
-				}
-				90%,
-							100% {
-					-o-transform: perspective(136px) rotateY(180deg);
-					opacity: 0;
-				}
-			}
-
-			@-ms-keyframes cssload-fold-thecube {
-				0%, 10% {
-					-ms-transform: perspective(136px) rotateX(-180deg);
-					opacity: 0;
-				}
-				25%,
-							75% {
-					-ms-transform: perspective(136px) rotateX(0deg);
-					opacity: 1;
-				}
-				90%,
-							100% {
-					-ms-transform: perspective(136px) rotateY(180deg);
-					opacity: 0;
-				}
-			}
-
-			@-webkit-keyframes cssload-fold-thecube {
-				0%, 10% {
-					-webkit-transform: perspective(136px) rotateX(-180deg);
-					opacity: 0;
-				}
-				25%,
-							75% {
-					-webkit-transform: perspective(136px) rotateX(0deg);
-					opacity: 1;
-				}
-				90%,
-							100% {
-					-webkit-transform: perspective(136px) rotateY(180deg);
-					opacity: 0;
-				}
-			}
-
-			@-moz-keyframes cssload-fold-thecube {
-				0%, 10% {
-					-moz-transform: perspective(136px) rotateX(-180deg);
-					opacity: 0;
-				}
-				25%,
-							75% {
-					-moz-transform: perspective(136px) rotateX(0deg);
-					opacity: 1;
-				}
-				90%,
-							100% {
-					-moz-transform: perspective(136px) rotateY(180deg);
-					opacity: 0;
-				}
-			}
 		</style>
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.min.css">
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.colors.min.css">
+		<link rel="stylesheet" href="vendors/materialIcons/material-icons.css">
 		<!-- Path to your custom app styles-->
 		<link rel="stylesheet" href="static/my-styles.css">
 		
 	</head>
-	<body onload="onLoad()" class="theme-indigo">
+	<body class="theme-bluegray">
 		<div id="overlay-preloader">
-			<div class="cssload-thecube">
-				<div class="cssload-cube cssload-c1"></div>
-				<div class="cssload-cube cssload-c2"></div>
-				<div class="cssload-cube cssload-c4"></div>
-				<div class="cssload-cube cssload-c3"></div>
-			</div>
+			<center>
+				<i class="material-icons" style="font-size: 60px">event_seat</i>
+			</center>
 			<div align="center" style="padding: 20px 0;">
 				<img class="sad" style="display: none;" src="static/emoji.png" alt="" width="45%">
 				<h4>Loading..</h4>
@@ -233,20 +52,35 @@
 					<div data-page="panel-left" class="page">
 						<div class="navbar">
 							<div class="navbar-inner">
-								<div class="center">Dogefaucet Indigo</div>
+								<div class="center">Dogefaucet</div>
 							</div>
 						</div>
-						<div class="page-content">
+						<div class="page-content color-white">
 							<div class="content-block">
-								<span class="color-gray">Current Earnings</span>
-								<h3 class="no-margin earningValue">0 DOGE</h3>
+								<span class="color-gray" data-lang="current_earning">Current Earnings</span>
+								<h2 class="no-margin earningValue">0 Ð</h2>
+								<span class="color-gray" data-lang="current_address">Current Address</span>
+								<h2 class="no-margin addressDogecoin"></h2>
 							</div>
 							<div class="list-block">
 								<ul>
 									<li><a href="news.html" class="item-link close-panel">
 											<div class="item-content">
+												<div class="item-media">
+													<i class="material-icons">notifications_none</i>
+												</div>
 												<div class="item-inner">
-													<div class="item-title">News</div>
+													<div class="item-title" data-lang="news">News</div>
+												</div>
+											</div>
+									</a></li>
+									<li><a href="donate.html" class="item-link close-panel">
+											<div class="item-content">
+												<div class="item-media">
+													<i class="material-icons">monetization_on</i> 
+												</div>
+												<div class="item-inner">
+													<div class="item-title" data-lang="donate_us">Donate Us</div>
 												</div>
 											</div>
 									</a></li>
@@ -268,7 +102,7 @@
 						<div class="navbar">
 							<div class="navbar-inner">
 								<!-- We have home navbar without left link-->
-								<div class="center sliding">Dogefaucet Indigo</div>
+								<div class="center sliding">Dogefaucet</div>
 								<div class="right">
 									<!-- Right link contains only icon - additional "icon-only" class-->
 									<a href="#" class="link icon-only refresh-data" style="display: none;"> <i class="icon f7-icons icon-refresh"></i></a>
@@ -279,8 +113,8 @@
 						<div class="toolbar tabbar">
 							<div class="toolbar-inner">
 								<a href="#faucet" class="active tab-link">Faucet</a>
-								<a href="#withdrawal" class="tab-link">Withdrawal</a>
-								<a href="#history" class="tab-link">History</a>
+								<a href="#withdrawal" class="tab-link" data-lang="withdrawal_title">Withdrawal</a>
+								<a href="#history" class="tab-link" data-lang="history_title">History</a>
 							</div>
 						</div>
 						<div class="tabs-animated-wrap">
@@ -290,12 +124,32 @@
 										<div class="preloader"></div>
 										<div class="pull-to-refresh-arrow"></div>
 									</div>
+									<div class="card padding-8">
+										<div class="card-content">
+											<div class="content-block">
+												<div class="row">
+													<div class="col-60">
+														<div style="padding: 4px;">Display Language</div>
+													</div>
+													<div class="col-40">
+														<div class="item-content">
+															<div class="item-inner picker-lang"> 
+																<div class="item-input">
+																	<input type="text" placeholder="Language" readonly="readonly" id="picker-lang" value="English" />
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="content-block tiny-content" style="padding-top: 5%;">
 										<div class="content-block" align="center">
-											<h1 class="no-margin earningValue">0 DOGE</h1>
+											<h1 class="no-margin earningValue">0 Ð</h1>
 											<h2 class="no-margin color-gray earningValueDollar">$ 0</h2>
 											<br>
-											<button id="doClaim" class="button button-raised button-fill button-big disabled">Claim Now</button>
+											<button id="doClaim" class="button button-raised button-fill button-big disabled" data-lang="claim_now">Claim Now</button>
 
 											<input id="addressInput" type="hidden"/>
 										</div>
@@ -304,8 +158,8 @@
 											<div class="col-6">
 												<div class="card-content">
 													<div class="content-block tiny">
-														<p>Referral Earn <span id="helpRefComission" class="help">?</span></p>
-														<h1 class="no-margin earningRefValue">0 D</h1>
+														<p><span data-lang="referral_earn">Referral Earn</span> <span id="helpRefComission" class="help">?</span></p>
+														<h1 class="no-margin earningRefValue">0 Ð</h1>
 													</div>
 												</div>
 											</div>
@@ -313,7 +167,7 @@
 												<div class="">
 													<div class="card-content">
 														<div class="content-block tiny">
-															<p>Referral Code <span id="helpRefCode" class="help">?</span></p>
+															<p><span data-lang="referral_code">Referral Code</span> <span id="helpRefCode" class="help">?</span></p>
 															<h1 class="no-margin referralCode"></h1>
 														</div>
 													</div>
@@ -325,17 +179,33 @@
 								<div id="withdrawal" class="page-content tab">
 									<div class="content-block tiny-content">
 										<div class="card">
-											<div class="card-header">Request Withdrawal</div>
+											<div class="card-content padding-8">
+												<div class="progressbar-inline">
+													<div class="row">
+														<div class="col-50">
+															<h2 class="no-margin earningValue">0.344</h2>
+														</div>
+														<div class="col-50" align="right">
+															<h4 class="no-margin" id="percentValue">20%</h4>
+														</div>
+													</div>
+													<p><span class="progressbar"></span></p>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-header" data-lang="request_withdrawal">Request Withdrawal</div>
 											<div class="card-content">
 												<div class="content-block">
-													<p>Minimum withdrawal is <span id="wdMin"></span> DOGE. Withdrawal Fee is <span id="wdFee"></span> DOGE</p>
+													<p>
+														<span data-lang="minimum_withdrawal">Minimum withdrawal is</span> <span id="wdMin"></span> DOGE. <span data-lang="fee_withdrawal">Withdrawal Fee is</span> <span id="wdFee"></span> DOGE</p>
 												</div>
 												<div class="list-block inputs-list">
 													<ul>
 														<li>
 															<div class="item-content">
 																<div class="item-inner"> 
-																	<div class="item-title label">Amount</div>
+																	<div class="item-title label" data-lang="amount">Amount</div>
 																	<div class="item-input">
 																		<input type="text" id="amountWd"/>
 																	</div>
@@ -345,7 +215,7 @@
 														<li>
 															<div class="item-content">
 																<div class="item-inner"> 
-																	<div class="item-title label">Estimated Receive</div>
+																	<div class="item-title label" data-lang="estimated_receive">Estimated Receive</div>
 																	<div class="item-input disabled">
 																		<input type="text" id="estimatedReceived"/>
 																	</div>
@@ -355,14 +225,14 @@
 														<li>
 															<div class="item-content">
 																<div class="item-inner" align="right">	
-																	<button id="doWithdrawal" class="button button-raised button-fill no-fastclick">Send Request</button>
+																	<button id="doWithdrawal" class="button button-raised button-fill no-fastclick" data-lang="send_request">Send Request</button>
 																</div>
 															</div>
 														</li>
 													</ul>
 												</div>
 												<div class="content-padding">
-													<small><span class="badge bg-orange">Attention</span> All Withdrawal requests are processed automatically immediantely after submitting a withdrawal request.</small>
+													<small><span class="badge bg-orange" data-lang="attention">Attention</span> <span data-lang="withdrawal_attention">All Withdrawal requests are processed automatically immediantely after submitting a withdrawal request.</span></small>
 												</div>
 											</div>
 										</div>
@@ -376,7 +246,16 @@
 									<div class="content-block tiny-content">
 										<div class="data-table data-table-init card">
 											<div class="card-header">
-												<div class="data-table-title">Earning</div>
+												<div class="data-table-title" data-lang="referral_title">Referrals</div>
+											</div>
+											<div class="content-block">
+												<h2 id="referralCounter">0</h2>
+											</div>
+										</div>
+										<br>
+										<div class="data-table data-table-init card">
+											<div class="card-header">
+												<div class="data-table-title" data-lang="earning_title">Earning</div>
 											</div>
 											<div class="card-content">
 												<table>
@@ -396,7 +275,7 @@
 										<br>
 										<div class="data-table data-table-init card">
 											<div class="card-header">
-												<div class="data-table-title">Withdrawal</div>
+												<div class="data-table-title" data-lang="withdrawal_title">Withdrawal</div>
 											</div>
 											<div class="card-content">
 												<table>
@@ -404,7 +283,7 @@
 														<tr>
 															<th class="label-cell">#</th>
 															<th class="label-cell">Status</th>
-															<th class="label-cell">Detail</th>
+															<th class="label-cell">Details</th>
 														</tr>
 													</thead>
 													<tbody id="withdrawalTable">
@@ -423,10 +302,54 @@
 		</div>
 		<!-- Path to Framework7 Library JS-->
 		<script type="text/javascript" src="vendors/framework7/dist/js/framework7.min.js"></script>
+		<script type="text/javascript" src="vendors/framework7/dist/js/framework7.plugin.min.js"></script>
 		<script type="text/javascript" src="vendors/nyanStorage/nyanStorage.js"></script>
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
 		<!-- Path to your app js-->
 		
-		<script type="text/javascript" src="static/apps.min.js"></script>
+		<script type="text/javascript" src="static/app.js"></script>
+		<script>
+			function Language(lang) {
+				var words = {};
+				var __construct = function() {
+					if (typeof lang === 'undefined') {
+						lang = "en";
+					}
+					return;
+				}
+
+				this.push = function(word, text) {
+					words[word] = text;
+
+					return;
+				}
+				this.get = function(word, defaultString) {
+					return words[word] || defaultString;
+				}
+				this.render = function(optional) {
+					if (typeof optional == "object") {
+						optional.forEach((word) => {
+							var text = words[word];
+
+							Dom7('[data-lang="' + word + '"]').text(text);
+						});
+					} else if (typeof optional === "undefined") {
+						Object.keys(words).forEach((word) => {
+							var text = words[word];
+
+							Dom7('[data-lang="' + word + '"]').text(text);
+						});
+					}
+				}
+			}
+			function useLang(lang) {
+				var scriptDOM = document.createElement("script");
+					scriptDOM.src = "lang/lang." + lang + ".js";
+
+				document.body.appendChild(scriptDOM); 
+			}
+			//default
+			useLang('us');
+		</script>
 	</body>
 </html>

@@ -27,7 +27,6 @@
 		</style>
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.min.css">
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.colors.min.css">
-		<link rel="stylesheet" href="vendors/materialIcons/material-icons.css">
 		<!-- Path to your custom app styles-->
 		<link rel="stylesheet" href="static/my-styles.css">
 		
@@ -35,7 +34,7 @@
 	<body class="theme-bluegray">
 		<div id="overlay-preloader">
 			<center>
-				<i class="material-icons" style="font-size: 60px">event_seat</i>
+				<i class="icon icon-seat"></i>
 			</center>
 			<div align="center" style="padding: 20px 0;">
 				<img class="sad" style="display: none;" src="static/emoji.png" alt="" width="45%">
@@ -67,7 +66,7 @@
 									<li><a href="news.html" class="item-link close-panel">
 											<div class="item-content">
 												<div class="item-media">
-													<i class="material-icons">notifications_none</i>
+													<i class="icon icon-notif"></i>
 												</div>
 												<div class="item-inner">
 													<div class="item-title" data-lang="news">News</div>
@@ -77,7 +76,7 @@
 									<li><a href="donate.html" class="item-link close-panel">
 											<div class="item-content">
 												<div class="item-media">
-													<i class="material-icons">monetization_on</i> 
+													<i class="icon icon-monetize"></i> 
 												</div>
 												<div class="item-inner">
 													<div class="item-title" data-lang="donate_us">Donate Us</div>
@@ -127,20 +126,18 @@
 									<div class="card padding-8">
 										<div class="card-content">
 											<div class="content-block">
-												<div class="row">
-													<div class="col-60">
-														<div style="padding: 4px;">Display Language</div>
-													</div>
-													<div class="col-40">
-														<div class="item-content">
-															<div class="item-inner picker-lang"> 
-																<div class="item-input">
-																	<input type="text" placeholder="Language" readonly="readonly" id="picker-lang" value="English" />
-																</div>
-															</div>
+												<a href="#" id="language-container" class="item-link smart-select">
+										            <select id="language">
+										            	<option value="us" selected="selected">English</option>
+										            	<option value="id">Indonesia</option>
+										            	<option value="ptg">Portugis</option>
+										            </select>
+										            <div class="item-content">
+														<div class="item-inner row">
+															<div class="item-title">Select Language</div>
 														</div>
-													</div>
-												</div>
+										            </div>
+										        </a>
 											</div>
 										</div>
 									</div>
@@ -307,7 +304,7 @@
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
 		<!-- Path to your app js-->
 		
-		<script type="text/javascript" src="static/apps.min.js"></script>
+		<script type="text/javascript" src="static/app.js"></script>
 		<script>
 			function Language(lang) {
 				var words = {};

@@ -305,48 +305,7 @@
 		<!-- Path to your app js-->
 		
 		<script type="text/javascript" src="static/apps.min.js"></script>
-		<script>
-			function Language(lang) {
-				var words = {};
-				var __construct = function() {
-					if (typeof lang === 'undefined') {
-						lang = "en";
-					}
-					return;
-				}
-
-				this.push = function(word, text) {
-					words[word] = text;
-
-					return;
-				}
-				this.get = function(word, defaultString) {
-					return words[word] || defaultString;
-				}
-				this.render = function(optional) {
-					if (typeof optional == "object") {
-						optional.forEach((word) => {
-							var text = words[word];
-
-							Dom7('[data-lang="' + word + '"]').text(text);
-						});
-					} else if (typeof optional === "undefined") {
-						Object.keys(words).forEach((word) => {
-							var text = words[word];
-
-							Dom7('[data-lang="' + word + '"]').text(text);
-						});
-					}
-				}
-			}
-			function useLang(lang) {
-				var scriptDOM = document.createElement("script");
-					scriptDOM.src = "lang/lang." + lang + ".js";
-
-				document.body.appendChild(scriptDOM); 
-			}
-			//default
-			useLang('us');
-		</script>
+		<script type="text/javascript" src="lang/lang.min.js"></script>
+		
 	</body>
 </html>

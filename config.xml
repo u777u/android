@@ -23,7 +23,7 @@
   <plugin name="com.verso.cordova.clipboard" spec="0.1.0" />
   <plugin name="cordova-plugin-extension" source="npm" />
   <plugin name="cordova-plugin-device" source="npm"/>
-  <plugin name="com.analytics.google" source="pgb" />
+  <plugin name="com.analytics.google" source="npm" />
 
   <!-- <plugin name="cordova-plugin-appavailability" source="npm" /> -->
 

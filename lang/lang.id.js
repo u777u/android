@@ -10,7 +10,7 @@ Lang.push('referral_help', 'Dapatkan komisi sebesar 10% dari setiap hasil claim 
 Lang.push('withdrawal_attention', 'Semua permintaan penarikan akan di prosess secara otomatis setelah permintaan penarikan di kirim');
 Lang.push('referral_code_help', 'Tekan kode referral untuk copy ke clipboard');
 Lang.push('minimum_withdrawal', 'Saldo minimal yang bisa di tarik adalah');
-Lang.push('fee_withdrawal', 'Biaya penarikan dana sebesar ');
+Lang.push('fee_withdrawal', 'Biaya penarikan saldo sebesar ');
 Lang.push('request_withdrawal', 'Permintaan Penarikan');
 Lang.push('current_address', 'Alamat Wallet Sekarang');
 Lang.push('current_earning', 'Pendapatan Sekarang');

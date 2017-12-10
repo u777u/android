@@ -25,6 +25,9 @@
 .no-margin {
 	margin: 0;
 }
+.content-block.tiny-content {
+    margin: 16px 0;
+}
 .content-padding {
 	padding: 16px;
 }

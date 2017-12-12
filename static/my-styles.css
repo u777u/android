@@ -124,3 +124,30 @@ i.icon.icon-seat {
 .hideReason {
     display: none;
 }
+#menuBottom {
+    display: none;
+}
+#menuBottom.active {
+    display: flex;
+}
+
+#box-toggle {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+}
+#box-toggle.active {
+    bottom: 86px;
+}
+#box-toggle > .circle {
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    bottom: -32px;
+    right: -32px;
+    border-radius: 50%;
+    background: #5f7d8a;
+}

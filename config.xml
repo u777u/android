@@ -5,7 +5,7 @@
     versionCode = "3"
     version     = "1.3.0" >
 
-  <name>DogecoinFaucet</name>
+  <name>DogeFaucet</name>
 
   <description>
       Claim Dogecoin every 4 minute's

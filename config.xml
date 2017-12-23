@@ -23,6 +23,7 @@
   <plugin name="cordova-plugin-extension" source="npm" />
   <plugin name="cordova-plugin-device" source="npm"/>
   <plugin name="cordova-plugin-google-analytics" source="npm"/>
+  <plugin name="cordova-device-accounts" source="npm" />
 
   <access origin="*"/>
 

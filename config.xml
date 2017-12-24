@@ -2,8 +2,8 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.dogefaucet.apps"
-    versionCode = "15"
-    version     = "3.0.0" >
+    versionCode = "16"
+    version     = "3.2.0" >
 
   <name>DogeFaucet</name>
 
@@ -16,6 +16,7 @@
   </author>
   
   <preference name="permissions" value="none"/>
+  <preference name="AutoHideSplashScreen" value="true"/>
 
   <!-- Plugins -->
   <plugin name="cordova-plugin-admobpro" spec="2.29.29" />

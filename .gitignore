@@ -9,3 +9,4 @@ yarn.lock
 /res-indigo
 Test.md
 /static/js
+/node_modules

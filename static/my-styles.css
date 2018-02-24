@@ -214,6 +214,13 @@ i.icon.icon-seat {
     overflow-wrap: break-word;
 }
 
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+
 #newsWrapper .item-inner .item-text {
 	-webkit-line-clamp: unset;
 	overflow: unset;

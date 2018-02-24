@@ -31,7 +31,7 @@
 		<link rel="stylesheet" href="static/my-styles.css">
 		
 	</head>
-	<body class="theme-bluegray">
+	<body class="theme-blue">
 		<div id="overlay-preloader">
 			<center>
 				<img id="nyandev-logo" src="static/nyandev.png"></img>
@@ -58,6 +58,8 @@
 							<div class="content-block">
 								<span class="color-gray" data-lang="current_earning">Current Earnings</span>
 								<h2 class="no-margin earningValue">0 Ð</h2>
+								<span class="color-gray data-lang="referral_earn">Current Referral Earnings</span>
+								<h2 class="no-margin earningRefValue">0 Ð</h2>
 								<span class="color-gray" data-lang="current_address">Current Address</span>
 								<h2 class="no-margin addressDogecoin"></h2>
 							</div>
@@ -69,7 +71,7 @@
 													<i class="icon icon-notif"></i>
 												</div>
 												<div class="item-inner">
-													<div class="item-title" data-lang="news">News</div>
+													<div class="newsListItem item-title" data-lang="news">News </div>
 												</div>
 											</div>
 									</a></li>
@@ -80,6 +82,16 @@
 												</div>
 												<div class="item-inner">
 													<div class="item-title" data-lang="donate_us">Donate Us</div>
+												</div>
+											</div>
+									</a></li>
+									<li><a href="help.html" class="item-link close-panel">
+											<div class="item-content">
+												<div class="item-media">
+													<i class="icon icon-refresh"></i> 
+												</div>
+												<div class="item-inner">
+													<div class="item-title" data-lang="help_app">Help</div>
 												</div>
 											</div>
 									</a></li>
@@ -123,10 +135,10 @@
 										<div class="preloader"></div>
 										<div class="pull-to-refresh-arrow"></div>
 									</div>
-									<div class="card color-white" style="background-color: #E57373;">
+									<div class="card color-white" style="background-color: #FF9800;">
 										<div class="card-content padding-8">
 											<div class="content-block">
-												<span>Be careful with bots, multiple accounts and automation we have a sensitive system.</span>
+												<span id="notifMessage"></span>
 											</div>
 										</div>
 									</div>
@@ -147,8 +159,8 @@
 											<div class="col-6">
 												<div class="card-content">
 													<div class="content-block tiny">
-														<span data-lang="referral_earn">Referral Earn</span>
-														<h1 class="no-margin earningRefValue">0 Ð</h1>
+														<span data-lang="app_version">App Version</span>
+														<h1 class="no-margin appVersion">2.5.1</h1>
 													</div>
 												</div>
 											</div>
@@ -172,10 +184,10 @@
 												<div class="progressbar-inline">
 													<div class="row">
 														<div class="col-50">
-															<h2 class="no-margin earningValue">0.344</h2>
+															<h2 class="no-margin earningValue">0</h2>
 														</div>
 														<div class="col-50" align="right">
-															<h4 class="no-margin" id="percentValue">20%</h4>
+															<h4 class="no-margin" id="percentValue">0%</h4>
 														</div>
 													</div>
 													<p><span class="progressbar"></span></p>
@@ -187,7 +199,7 @@
 											<div class="card-content">
 												<div class="content-block">
 													<p>
-														<span data-lang="minimum_withdrawal">Minimum withdrawal is</span> <span id="wdMin"></span> DOGE. <span data-lang="fee_withdrawal">Withdrawal Fee is</span> <span id="wdFee"></span> DOGE</p>
+														<span data-lang="minimum_withdrawal">Minimum withdrawal is</span> <span id="wdMin"></span> DOGE. <span data-lang="maximum_withdrawal">Maximum withdrawal is</span> <span id="wdMax"></span> DOGE.<span data-lang="fee_withdrawal">Withdrawal Fee is adjust by withdrawal level</p>
 												</div>
 												<div class="list-block inputs-list">
 													<ul>
@@ -196,7 +208,7 @@
 																<div class="item-inner"> 
 																	<div class="item-title label" data-lang="amount">Amount</div>
 																	<div class="item-input">
-																		<input type="text" id="amountWd"/>
+																		<input type="text" id="amountWd" placeholder="0" />
 																	</div>
 																</div>
 															</div>
@@ -213,6 +225,14 @@
 														</li>
 														<li>
 															<div class="item-content">
+																<div class="item-inner">
+																	<div class="item-title label">Withdrawal Level</div>
+																	<button id="selectWithdrawalLevel" data-level="normal" class="button button-raised no-fastclick">Normal</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="item-content">
 																<div class="item-inner" align="right">	
 																	<button id="doWithdrawal" class="button button-raised button-fill no-fastclick" data-lang="send_request">Send Request</button>
 																</div>
@@ -221,7 +241,7 @@
 													</ul>
 												</div>
 												<div class="content-padding">
-													<small><span class="badge bg-orange" data-lang="attention">Attention</span> <span data-lang="withdrawal_attention">All Withdrawal requests are processed automatically immediantely after submitting a withdrawal request.</span></small>
+													<small><span class="badge bg-orange" data-lang="attention">Attention</span> <span data-lang="withdrawal_attention">Withdrawal requests are processed automatically immediantely after submitting a withdrawal request.</span></small>
 												</div>
 											</div>
 										</div>
@@ -233,52 +253,76 @@
 										<div class="pull-to-refresh-arrow"></div>
 									</div>
 									<div class="content-block tiny-content">
-										<div class="data-table data-table-init card">
-											<div class="card-header">
-												<div class="data-table-title" data-lang="referral_title">Referrals</div>
+										<div class="row rowHistory">
+											<div class="col-6">
+												<div class="data-table data-table-init card">
+													<div class="card-header">
+														<div class="data-table-title" data-lang="referral_title">Referrals</div>
+													</div>
+													<div class="content-block">
+														<h2 id="referralCounter">0</h2>
+													</div>
+												</div>
 											</div>
-											<div class="content-block">
-												<h2 id="referralCounter">0</h2>
-											</div>
-										</div>
-										<br>
-										<div class="data-table data-table-init card">
-											<div class="card-header">
-												<div class="data-table-title" data-lang="earning_title">Earning</div>
-											</div>
-											<div class="card-content">
-												<table>
-													<thead>
-														<tr>
-															<th class="label-cell">#</th>
-															<th class="label-cell">Amount</th>
-															<th class="label-cell">Time</th>
-														</tr>
-													</thead>
-													<tbody id="tableEarning">
-													
-													</tbody>
-												</table>
+											<div class="col-6">
+												<div class="data-table data-table-init card">
+													<div class="card-header">
+														<div class="data-table-title" data-lang="avgreward_title">Avg. Reward</div>
+													</div>
+													<div class="content-block">
+														<h2 id="avgReward">0</h2>
+													</div>
+												</div>
 											</div>
 										</div>
-										<br>
+										<div class="card">
+											<div class="card-content padding-8">
+												<div class="row">
+													<div class="col-8">
+														<div>
+															<span>Need know what label actualy mean?</span>
+														</div>
+													</div>
+													<div class="col-4">
+														<a href="help.html" class="item-link close-panel">Show Me</a>
+													</div>
+												</div>
+											</div>
+										</div>
 										<div class="data-table data-table-init card">
 											<div class="card-header">
 												<div class="data-table-title" data-lang="withdrawal_title">Withdrawal</div>
 											</div>
-											<div class="card-content">
-												<table>
-													<thead>
-														<tr>
-															<th class="label-cell">#</th>
-															<th class="label-cell">Status</th>
-															<th class="label-cell">Details</th>
-														</tr>
-													</thead>
-													<tbody id="withdrawalTable">
-
-													</tbody>
-												</table>
+											<div class="card-content" id="withdrawalTable">
+												<div class="accordion-list">
+													<div class="withdrawal-item accordion-item content-block">
+														<a href="#" class="item-link">
+															<div class="row big-font">
+																<div class="col-50">
+																	<span>Withdrawal</span>
+																</div>
+																<div class="col-50" align="right">
+																	<span>- Rp. 1000</span>
+																</div>
+															</div>
+															<span class="badge">Success</span>
+															<div class="date-time">
+																<i class="icon icon-time"></i> 19 Desember 2017 Pukul 17:00
+															</div>
+														</a>
+														<div class="accordion-item-content">
+															<div>
+																<span class="subtitle">Email</span><br>
+																<span>ryandevstudio@gmail.com</span>
+															</div>
+															<div>
+																<span class="subtitle">Alasan</span><br>
+																<span>Melanggar peraturan penggunaan aplikasi.</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -290,12 +334,19 @@
 			</div>
 		</div>
 		<!-- Path to Framework7 Library JS-->
-		<script type="text/javascript" src="vendors/framework7/dist/js/framework7.min.js"></script>
-		<script type="text/javascript" src="vendors/framework7/dist/js/framework7.plugin.min.js"></script>
-		<script type="text/javascript" src="vendors/nyanStorage/nyanStorage.js"></script>
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+		<script src="vendors/cacher/cacher.js"></script>
+		<script>
+			requireScript('framework7', '1.11.2', 'vendors/framework7/dist/js/framework7.min.js', function(){
+		    	requireScript('framework7.plugin', '1.11.2', 'vendors/framework7/dist/js/framework7.plugin.min.js');
+		    	requireScript('nyanStorage', '1.11.2', 'vendors/nyanStorage/nyanStorage.js');
+			});
+		</script>
+		<!-- <script async type="text/javascript" charset="utf-8" src="cordova.js"></script>   -->
 		<!-- Path to your app js-->
-	
-		<script type="text/javascript" src="static/apps.min.js"></script>
+		
+		<!-- <script src="static/js/dom.js"></script>
+		<script src="static/js/utilitize.js"></script>
+		<script src="static/js/events.js"></script> -->
+		<script src="static/apps.min.js"></script>
 	</body>
 </html>

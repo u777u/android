@@ -1,0 +1,25 @@
+<div class="data-table data-table-init card">
+	<div class="card-header">
+		<div class="data-table-title" data-lang="earning_title">Earning</div>
+	</div>
+	<div class="card-content">
+		<table>
+			<thead>
+				<tr>
+					<th class="label-cell">#</th>
+					<th class="label-cell">Amount</th>
+					<th class="label-cell">Time</th>
+				</tr>
+			</thead>
+			<tbody id="tableEarning">
+			
+			</tbody>
+		</table>
+	</div>
+</div>
+<br>
+
+nyanStorage.put('minWd', data.data.minWithdrawal);
+nyanStorage.put('feeWd', data.data.feeWithdrawal);
+nyanStorage.put('dollar', data.data.price);
+nyanStorage.put('account', data.address);

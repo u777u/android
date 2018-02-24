@@ -353,14 +353,10 @@
 	         return suppressErrorAlert;
 	      };
 	    </script>
-		<script src="vendors/cacher/cacher.js"></script>
-		<script>
-			requireScript('framework7', '1.11.2', 'vendors/framework7/dist/js/framework7.min.js', function(){
-		    	requireScript('framework7.plugin', '1.11.2', 'vendors/framework7/dist/js/framework7.plugin.min.js');
-		    	requireScript('nyanStorage', '1.11.2', 'vendors/nyanStorage/nyanStorage.js');
-			});
-		</script>
-		<!-- <script async type="text/javascript" charset="utf-8" src="cordova.js"></script>   -->
+	    <script src="vendors/framework7/dist/js/framework7.min.js"></script>
+	    <script src="vendors/framework7/dist/js/framework7.plugin.min.js"></script>
+	    <script src="vendors/nyanStorage/nyanStorage.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
 		<!-- Path to your app js-->
 		
 		<!-- <script src="static/js/dom.js"></script>

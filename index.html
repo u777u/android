@@ -60,8 +60,8 @@
 						</div>
 						<div class="page-content color-white">
 							<div class="content-block">
-								<span class="color-gray" data-lang="current_earning">Current Earnings</span>
-								<h2 class="no-margin earningValue">0 Ð</h2>
+								<span class="color-gray" data-lang="current_earning">Dogecoin Balance</span>
+								<h2 class="no-margin earningValue">0</h2>
 								<span class="color-gray data-lang="referral_earn">Current Referral Earnings</span>
 								<h2 class="no-margin earningRefValue">0 Ð</h2>
 								<span class="color-gray" data-lang="current_address">Current Address</span>
@@ -99,6 +99,16 @@
 												</div>
 											</div>
 									</a></li>
+									<li><a href="authfactory.html" class="item-link close-panel">
+											<div class="item-content">
+												<div class="item-media">
+													<i class="icon icon-security"></i> 
+												</div>
+												<div class="item-inner">
+													<div class="item-title" data-lang="help_app">2FA</div>
+												</div>
+											</div>
+									</a></li>
 								</ul>
 							</div>
 						</div>
@@ -129,8 +139,8 @@
 							<div class="toolbar-inner">
 								<a href="#faucet" class="active tab-link">Faucet</a>
 								<a href="#withdrawal" class="tab-link" data-lang="withdrawal_title">Withdrawal</a>
-								<a href="#exchange" class="tab-link" data-lang="history_title">Exchange</a>
 								<a href="#history" class="tab-link" data-lang="history_title">History</a>
+								<a href="#exchange" class="tab-link" data-lang="history_title">Exchange</a>
 							</div>
 						</div>
 						<div class="tabs-animated-wrap">
@@ -252,15 +262,6 @@
 										</div>
 									</div>
 								</div>
-								<div id="exchange" class="page-content tab pull-to-refresh-content" data-ptr-distance="55">
-									<div class="pull-to-refresh-layer">
-										<div class="preloader"></div>
-										<div class="pull-to-refresh-arrow"></div>
-									</div>
-									<div class="content-block tiny-content">
-										
-									</div>
-								</div>
 								<div id="history" class="page-content tab pull-to-refresh-content" data-ptr-distance="55">
 									<div class="pull-to-refresh-layer">
 										<div class="preloader"></div>
@@ -364,6 +365,19 @@
 										</div>
 									</div>
 								</div>
+								<div id="exchange" class="page-content tab">
+									<div class="content-block tiny-content">
+										<div class="card">
+											<div class="card-content padding-8">
+												<div class="content-block">
+													<h3 class="no-margin">Under Construction</h4>
+													<span>We are working on it.</span>
+													<br><br>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
 							</div>
 						</div>
 					</div>
@@ -393,6 +407,7 @@
 	    <script src="vendors/framework7/dist/js/framework7.min.js"></script>
 	    <script src="vendors/framework7/dist/js/framework7.plugin.min.js"></script>
 	    <script src="vendors/nyanStorage/nyanStorage.js"></script>
+	    <script src="vendors/qrcode/qrcode.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
 		<!-- Path to your app js-->
 		

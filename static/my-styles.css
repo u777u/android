@@ -237,3 +237,7 @@ i.icon.icon-seat {
 .legendTable tbody .badge {
 	font-size: 13px;
 }
+
+.exchange-form.list-block .item-inner {
+	padding-right: 0 !important;
+}

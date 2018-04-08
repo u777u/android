@@ -9,16 +9,30 @@
 		</div>
 	</div>
 	<div class="page-content 2fa-screen-content">
-		<div class="content-block">
-			<div id="qr-code">
-				
-			</div>
-			<h1 id="qr-code-text"></h1>
-			<button class="btn">reload</button>
+		<div id="main-token" class="content-block">
+			<center>
+				<div id="qr-code"></div>
+				<h1 id="qr-code-text">Loading</h1>
+				<span>Please add secret key into <strong>Google Authenticator</strong> by click secret key on above or scan QR Code and verify by input 6 random number from Google Authenticator apps.</span>
+				<br>
+				<input onkeydown="limitMe(this)" onkeyup="limitMe(this)" class="qr-code-verify-token" type="number" pattern="[0-9]{6}" maxlength="6">
+				<br>
+				<button id="qr-code-verify" class="button button-raised">Verify 2FA</button>
+			</center>
+		</div>
+		<div id="available-token" class="content-block hide">
+			<center>
+				<i class="icon icon-done"></i><br>
+				<span id="qr-code-description"></span>
+				<br>
+				<input onkeydown="limitMe(this)" onkeyup="limitMe(this)" class="qr-code-verify-token" type="number" pattern="[0-9]{6}" maxlength="6">
+				<br>
+				<button id="qr-code-remove" class="button button-raised button-fill color-red">Remove 2FA</button>
+			</center>
 		</div>
 
 		<div class="content-block">
-			<div class="list-block-label"><small><span class="badge bg-orange">Attention</span> This page used for Sign In and Sign Up. Just write down your Dogecoin wallet address for your account. Please use <b>Dogechain</b>, <b>Bitcoin Indonesia</b> or Wallet that address start with <i>"D"</i>, and Double check your address becouse address can't be change for security reason.</small></div>
+			<div class="list-block-label"><small><span class="badge bg-orange">Attention</span> Use Two Factory Authentication to prevent account usage on other devices and secure your account. Use the Google Authenticator app on your phone to use the OTP code.</small></div>
 		</div>
 	</div>
 </div>

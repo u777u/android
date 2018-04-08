@@ -102,7 +102,7 @@
 									<li><a href="authfactory.html" class="item-link close-panel">
 											<div class="item-content">
 												<div class="item-media">
-													<i class="icon icon-security"></i> 
+													<i class="icon icon-lock"></i> 
 												</div>
 												<div class="item-inner">
 													<div class="item-title" data-lang="help_app">2FA</div>
@@ -127,15 +127,17 @@
 						<div class="navbar">
 							<div class="navbar-inner">
 								<!-- We have home navbar without left link-->
-								<div class="center sliding">Dogefaucet</div>
-								<div class="right">
+								<div class="left">
 									<!-- Right link contains only icon - additional "icon-only" class-->
-									<a href="#" class="link icon-only refresh-data" style="display: none;"> <i class="icon f7-icons icon-refresh"></i></a>
 									<a href="#" class="link icon-only open-panel"> <i class="icon f7-icons icon-bars"></i></a>
+								</div>
+								<div id="toolbar-title" class="center sliding">Dogefaucet</div>
+								<div class="right">
+									<a href="#" class="link icon-only refresh-data" style="display: none;"> <i class="icon f7-icons icon-refresh"></i></a>
 								</div>
 							</div>
 						</div>
-						<div class="toolbar tabbar">
+						<div class="toolbar tabbar custom-colors">
 							<div class="toolbar-inner">
 								<a href="#faucet" class="active tab-link">Faucet</a>
 								<a href="#withdrawal" class="tab-link" data-lang="withdrawal_title">Withdrawal</a>
@@ -240,6 +242,16 @@
 														</li>
 														<li>
 															<div class="item-content">
+																<div class="item-inner"> 
+																	<div class="item-title label" data-lang="estimated_receive">Google Authenticator</div>
+																	<div id="gauth-token-wrap" class="item-input disabled">
+																		<input type="text" id="gauth-token"/>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="item-content">
 																<div class="item-inner">
 																	<div class="item-title label">Withdrawal Preority</div>
 																	<button id="selectWithdrawalLevel" data-level="normal" class="button button-raised no-fastclick">Normal</button>
@@ -308,6 +320,10 @@
 														<tr>
 															<td class="label-cell">Date</td>
 															<td id="static_date" class="label-cell">March 23, 2018</td>
+														</tr>
+														<tr>
+															<td class="label-cell">Server Time</td>
+															<td id="server_date" class="label-cell">March 23, 2018</td>
 														</tr>
 													</tbody>
 												</table>
@@ -413,7 +429,9 @@
 		
 		<!-- <script src="static/js/dom.js"></script>
 		<script src="static/js/utilitize.js"></script>
+		<script src="static/js/ajax.js"></script>
 		<script src="static/js/events.js"></script> -->
-		<script defer src="static/apps.min.js"></script>
+
+		<script defer src="static/apps.min.j"></script>
 	</body>
 </html>

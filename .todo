@@ -1,0 +1,4 @@
+1. Membuat middleware untuk 2FA
+2. Membuat input token di withdrawal
+3. Membuat address change untuk 2FA (versi-3)
+4. Membuat UI baru (versi-3)

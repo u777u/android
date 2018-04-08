@@ -11,11 +11,20 @@
 	<div class="page-content 2fa-screen-content">
 		<div id="main-token" class="content-block">
 			<center>
-				<div id="qr-code"></div>
+				<div class="chip">
+					<div class="chip-media bg-pink">1</div>
+					<div class="chip-label">Initialize</div>
+				</div><br>
+				<span>Scan the QR-Code below with a phone that has <strong>Google Authenticator</strong> installed. You can download Android apps on Google Play Store.</span><br><br>
+				<div id="qr-code"></div><br>
+				<span>Can not scan? try entering the code manually.</span>
 				<h1 id="qr-code-text">Loading</h1>
-				<span>Please add secret key into <strong>Google Authenticator</strong> by click secret key on above or scan QR Code and verify by input 6 random number from Google Authenticator apps.</span>
-				<br>
-				<input onkeydown="limitMe(this)" onkeyup="limitMe(this)" class="qr-code-verify-token" type="number" pattern="[0-9]{6}" maxlength="6">
+				<div class="chip">
+					<div class="chip-media bg-pink">2</div>
+					<div class="chip-label">Verify</div>
+				</div><br>
+				<span>Enter the 6 digit authentication code generated.</span>
+				<input onkeydown="limitMe(this)" onkeyup="limitMe(this)" id="enableTokenVerify" class="qr-code-verify-token" type="number" pattern="[0-9]{6}" maxlength="6">
 				<br>
 				<button id="qr-code-verify" class="button button-raised">Verify 2FA</button>
 			</center>

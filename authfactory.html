@@ -34,7 +34,7 @@
 				<i class="icon icon-done"></i><br>
 				<span id="qr-code-description"></span>
 				<br>
-				<input onkeydown="limitMe(this)" onkeyup="limitMe(this)" class="qr-code-verify-token" type="number" pattern="[0-9]{6}" maxlength="6">
+				<input onkeydown="limitMe(this)" onkeyup="limitMe(this)" id="removeTokenVerify" class="qr-code-verify-token" type="number" pattern="[0-9]{6}" maxlength="6">
 				<br>
 				<button id="qr-code-remove" class="button button-raised button-fill color-red">Remove 2FA</button>
 			</center>

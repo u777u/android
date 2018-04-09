@@ -26,7 +26,7 @@
   <plugin name="cordova-plugin-device" spec="2.0.0"/>
   <plugin name="cordova-plugin-google-analytics" spec="1.8.3"/>
   <plugin name="cordova-plugin-device-accounts" source="npm"/>
-  <plugin name="de.appplant.cordova.plugin.local-notification" source="npm" />
+  <!-- <plugin name="de.appplant.cordova.plugin.local-notification" source="npm" /> -->
 
   <access origin="*"/>
 

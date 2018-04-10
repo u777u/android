@@ -3,3 +3,5 @@
 3. Membuat address change untuk 2FA (versi-3)
 4. Membuat UI baru (versi-3)
 5. Email tidak terdeteksi ISSUE#1
+6. Device Model tidak terdeteksi ISSUE#2
+7. Tambah field email di Login PR#1

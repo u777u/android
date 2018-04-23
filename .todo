@@ -1,8 +1,8 @@
 1. Membuat middleware untuk 2FA
 2. Membuat input token di withdrawal
-3. Membuat address change untuk 2FA (versi-3)
-4. Membuat UI baru (versi-3)
+3. Membuat address change untuk 2FA (versi-3) !DEPRECATED
+4. Membuat UI baru (versi-3) !OK
 5. Email tidak terdeteksi ISSUE#1 !OK
 6. Device Model tidak terdeteksi ISSUE#2 !OK
-7. Tambah field email di Login PR#1 !OK
-8. Ganti icon Help PR#2
+7. Tambah field email di Login PR#1 !OK !DEPRECATED
+8. Ganti icon Help PR#2 !OK

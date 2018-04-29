@@ -28,7 +28,7 @@
   <plugin name="cordova-plugin-device-accounts" source="npm"/>
   <!-- <plugin name="de.appplant.cordova.plugin.local-notification" source="npm" /> -->
 
-  <gap:plugin name="cordova-plugin-apprate" />
+  <plugin spec="https://github.com/pushandplay/cordova-plugin-apprate.git" source="git" />>
 
   <access origin="*"/>
 

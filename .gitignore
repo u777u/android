@@ -8,5 +8,6 @@ yarn.lock
 /ide
 /res-indigo
 Test.md
+.test
 /static/js
 /node_modules

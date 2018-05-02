@@ -27,7 +27,6 @@
   <plugin name="cordova-plugin-apprate" source="npm" />>
   <plugin name="de.appplant.cordova.plugin.local-notification" source="npm" />
 
-
   <access origin="*"/>
 
   <platform name="android">
@@ -46,6 +45,5 @@
   <allow-intent href="tel:*" />
   <allow-intent href="sms:*" />
   <allow-intent href="mailto:*" />
-
 
 </widget>

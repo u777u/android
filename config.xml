@@ -16,8 +16,6 @@
   </author>
   
   <preference name="permissions" value="none"/>
-  <preference name="AutoHideSplashScreen" value="true"/>
-
   <!-- Plugins -->
   <plugin name="cordova-plugin-admobpro" spec="2.29.29" />
   <plugin name="com.verso.cordova.clipboard" spec="0.1.0" />

@@ -17,7 +17,7 @@
   
   <preference name="permissions" value="none"/>
   <!-- Plugins -->
-  <plugin name="cordova-plugin-admobpro" spec="2.29.29" />
+  <plugin name="cordova-plugin-admobpro" source="npm" />
   <plugin name="com.verso.cordova.clipboard" spec="0.1.0" />
   <plugin name="cordova-plugin-whitelist" source="npm"/>
   <plugin name="cordova-plugin-extension" source="npm" />

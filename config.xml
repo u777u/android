@@ -16,7 +16,9 @@
   </author>
   
   <preference name="permissions" value="none"/>
+  <preference name="phonegap-version"  value="cli-8.0.0" />
   <!-- Plugins -->
+  
   <plugin name="cordova-plugin-admobpro" spec="2.31.5" />
   <plugin name="com.verso.cordova.clipboard" spec="0.1.0" />
   <plugin name="cordova-plugin-google-analytics" spec="1.8.3"/>

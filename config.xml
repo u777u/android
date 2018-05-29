@@ -16,6 +16,7 @@
   </author>
   
   <preference name="permissions" value="none"/>
+  <preference name='pgb-builder-version' value='2' />
   <preference name="phonegap-version"  value="cli-8.0.0" />
   <!-- Plugins -->
   

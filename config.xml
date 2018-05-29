@@ -18,6 +18,7 @@
   <preference name="permissions" value="none"/>
   <preference name='pgb-builder-version' value='2' />
   <preference name="phonegap-version"  value="cli-8.0.0" />
+  <preference name="android-build-tool" value="gradle" />
   <!-- Plugins -->
   
   <plugin name="cordova-plugin-admobpro" source="npm" spec="2.31.6"/>
@@ -28,6 +29,7 @@
   <plugin name="cordova-android-referrer" source="npm" />
   <plugin name="cordova-application-preferences" source="npm" />
   <plugin name="de.appplant.cordova.plugin.local-notification" source="npm" />
+  <plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
 
   <access origin="*"/>
 

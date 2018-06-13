@@ -30,6 +30,8 @@
   <plugin name="cordova-application-preferences" source="npm" />
   <plugin name="de.appplant.cordova.plugin.local-notification" source="npm" />
   <plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
+  <plugin spec="https://github.com/nyancodeid/cordova-plugin-recaptcha" source="git" />
+
 
   <access origin="*"/>
 

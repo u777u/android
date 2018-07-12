@@ -361,3 +361,22 @@ i.icon.icon-rate {
 	font-size: 25px;
 	font-weight: 300;
 }
+
+.q-select {
+	margin: 16px 0;
+}
+.q-select .box {
+	padding: 8px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    border: 2px solid #333;
+    box-shadow: none;
+}
+.q-select input.box {
+	width: calc(100% - 20px);
+}
+
+.data-table .data-table-title {
+	font-size: 16px;
+}

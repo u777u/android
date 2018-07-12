@@ -9,7 +9,6 @@
 		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
 
 		<title>Dogefaucet</title>
-		<!-- Path to Framework7 Library CSS-->
 		<style>
 			#overlay-preloader {
 				position: absolute;
@@ -28,14 +27,18 @@
 				font-family: 'Fira Sans', sans-serif !important;
 			}
 		</style>
+		<!-- Path to Framework7 Library CSS-->
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.min.css">
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.material.colors.min.css">
 		<link rel="stylesheet" href="vendors/framework7/dist/css/framework7.keypad.min.css">
 		<!-- Path to your custom app styles-->
 
+		<!-- Development -->
 		<link rel="stylesheet" href="static/fira-fonts.css">
-		<link rel="stylesheet" href="static/my-styles.css">
-		
+		<link rel="stylesheet" href="static/apps.min.css">
+
+		<!-- Production -->
+		<!-- <link rel="stylesheet" href="static/apps.min.css"> -->
 	</head>
 	<body class="theme-blue">
 		<div id="overlay-preloader">
@@ -137,6 +140,7 @@
 									<a href="#" class="link icon-only open-panel"> <i class="icon f7-icons icon-bars"></i></a>
 								</div>
 								<div id="toolbar-title" class="center sliding">Dogefaucet</div>
+								<span id="indicatorStatus"></span>
 								<div class="right">
 									<a href="#" class="link icon-only refresh-data" style="display: none;"> <i class="icon f7-icons icon-refresh"></i></a>
 									<a href="#" class="link icon-only rate-data">
@@ -164,6 +168,7 @@
 										<div class="card-content padding-8">
 											<div class="content-block">
 												<span id="notifMessage"></span>
+												
 											</div>
 										</div>
 									</div>
@@ -190,7 +195,7 @@
 												</div>
 											</div>
 											<div class="col-6">
-												<div class="">
+												<div>
 													<div class="card-content">
 														<div class="content-block tiny">
 															<span data-lang="referral_code">Referral Code</span>
@@ -408,7 +413,7 @@
 											<h2 class="no-margin">Extra Earnings</h2>
 											<span>Watch video get extra reward every 4 hours</span>
 
-											<h1>00:00:00</h1>
+											<h1 id="tickerReward" class="hide">00:00:00</h1>
 										</center>
 										<p>
 											<a id="buttonReward" class="bg-amber button button-raised button-round button-fill disabled">Claim Extra Reward</a>
@@ -449,7 +454,6 @@
 		<script src="vendors/framework7/dist/js/framework7.keypad.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
 		<!-- Path to your app js  -->
-		<script src="https://jsconsole.com/js/remote.js?a6e77907-0509-4e83-8c5a-c2a11cc2e09a"></script>
 		<script src="http://192.168.43.50:1337/vorlon.js"></script>
 
 		<!-- <script src="static/js/dom.js"></script>

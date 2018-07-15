@@ -211,7 +211,12 @@
 		});
 	}
 	nyanStorage.prototype.isAvailable = function(key) {
-		return (localStorage.getItem(key) == null) ? false : true;
+		var locals = _get({
+			salt: this._salt
+		})
+
+		return (locals.storage[key]) ? true : false;	
+
 	}
 	nyanStorage.prototype.get = function(key) {
 		// Fire event

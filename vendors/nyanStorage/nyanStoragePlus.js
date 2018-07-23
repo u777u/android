@@ -169,8 +169,8 @@
 		return localStorage.getItem(key);
 	}
 
-	function nyanStorage() {
-		this._salt = 'wildan';	
+	function nyanStorage(salt) {
+		this._salt = salt;	
 		this._engine = 'local';
 	}
 
@@ -348,5 +348,5 @@
 		}
 	}
 
-	window.nyanStorage = new nyanStorage();
+	window.nyanStorage = nyanStorage
 })(window);

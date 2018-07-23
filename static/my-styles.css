@@ -88,9 +88,22 @@ input[type="number"] {
 .tiny-content {
 	padding: 0 8px;
 }
+.logo-text {
+	font-size: 4em;
+	color: #2196f3;
+}
+.logo-text .logo-text--title {
+	color: #616161;
+}
+.waves-effect {
+	position: fixed;
+	z-index: inherit;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 .sad {
 	font-size: 62px;
-	color: rgba(0,0,0,0.4);
 	font-family: 'Roboto Mono',monospace;
 }
 .content-nowrap {

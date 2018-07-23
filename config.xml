@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.dogefaucet.apps"
+    id          = "org.nyandev-id.dogefaucet"
     versionCode = "17"
-    version     = "3.3.1" >
+    version     = "3.6.9" >
 
-  <name>DogeFaucet</name>
+  <name>DogeFaucet New</name>
 
   <description>
-      Claim Dogecoin every 4 minute's
+      Claim Dogecoin every 4 minute's NyanDev Indonesia
   </description>
 
   <author href="https://facebook.com/ryan.hac" email="ryandevstudio@gmail.com">
@@ -33,7 +33,6 @@
   <plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
   <plugin name="cordova-plugin-android-permissions" source="npm" />
   <plugin spec="https://github.com/nyancodeid/cordova-plugin-recaptcha" source="git" />
-
 
   <access origin="*"/>
 

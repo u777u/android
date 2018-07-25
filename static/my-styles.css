@@ -16,6 +16,30 @@ input
 	user-select: auto !important;
 }
 
+#overlay-preloader {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #FFF;
+	z-index: 9999;
+	padding-top: 20vh;
+	visibility: visible;
+    opacity: 1;
+}
+#overlay-preloader.hidden {
+	visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+#overlay-preloader h4 {
+	max-width: 90%;
+}
+* {
+	font-family: 'Fira Sans', sans-serif !important;
+}
+
 .notif-msg {
 	padding: 8px;
 	background-color: #4CAF50;

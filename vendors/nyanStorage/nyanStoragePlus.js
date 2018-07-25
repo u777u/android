@@ -259,12 +259,31 @@
 		}
 	}
 	nyanStorage.prototype.increment = function(key, numb) {
-		var isAvailable = (localStorage.getItem(key) == null) ? false : true;
+		var content = null;
+		var locals = _get({
+			salt: this._salt
+		});
 
-		if (isAvailable) {
-			localStorage.setItem(key, ((localStorage.getItem(key) * 1) + numb));
+		if (typeof numb !== "number") {
+			throw new Error('increment value not number')
+		}
+
+		if (locals.storage[key]) {
+			locals.storage[key] += numb;
+
+			_post({
+				storage: locals.storage,
+				version: locals.version,
+				salt: this._salt
+			})
 		} else {
-			localStorage.setItem(key, 1);
+			locals.storage[key] = numb;
+
+			_post({
+				storage: locals.storage,
+				version: locals.version,
+				salt: this._salt
+			})
 		}
 	};
 	nyanStorage.prototype.updateItem = function(key, data) {

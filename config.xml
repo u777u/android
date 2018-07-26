@@ -17,7 +17,7 @@
   
   <preference name="permissions" value="none"/>
   <preference name='pgb-builder-version' value='2' />
-  <preference name="phonegap-version"  value="cli-8.0.0" />
+<!--   <preference name="phonegap-version"  value="cli-8.0.0" /> -->
   <preference name="android-build-tool" value="gradle" />
   <!-- Plugins -->
   
@@ -27,7 +27,7 @@
   <plugin name="cordova-plugin-google-analytics" source="npm" spec="1.8.3"/>
   <plugin name="cordova-plugin-device-accounts" source="npm"/>
   <plugin name="cordova-plugin-apprate" source="npm" />
-  <!-- <plugin name="cordova-plugin-local-notification" source="npm" spec="0.9.0-beta.3"/> -->
+  <plugin name="cordova-plugin-local-notification" source="npm" spec="0.9.0-beta.3"/>
   <plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
   <plugin name="cordova-plugin-android-permissions" source="npm" />
   <plugin spec="https://github.com/nyancodeid/cordova-plugin-recaptcha" source="git" />

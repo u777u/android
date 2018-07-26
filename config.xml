@@ -21,6 +21,7 @@
   <preference name="android-build-tool" value="gradle" /> -->
   <!-- Plugins -->
   
+  <plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
   <plugin name="cordova-plugin-whitelist" source="npm"/>
   <plugin name="cordova-plugin-admobpro" source="npm" spec="2.31.6"/>
   <plugin name="com.verso.cordova.clipboard"  source="npm" spec="0.1.0" />
@@ -28,7 +29,6 @@
   <plugin name="cordova-plugin-device-accounts" source="npm"/>
   <plugin name="cordova-plugin-apprate" source="npm" />
   <plugin name="cordova-plugin-local-notification" source="npm" spec="0.9.0-beta.3"/>
-  <plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
   <plugin name="cordova-plugin-android-permissions" source="npm" />
   <plugin spec="https://github.com/nyancodeid/cordova-plugin-recaptcha" source="git" />
 

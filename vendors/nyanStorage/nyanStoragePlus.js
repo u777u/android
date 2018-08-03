@@ -207,7 +207,7 @@
 		_migrate({
 			salt: this._salt
 		}, function(status, e) {
-			console.log(status, e);
+			
 		});
 	}
 	nyanStorage.prototype.isAvailable = function(key) {

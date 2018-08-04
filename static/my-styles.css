@@ -17,27 +17,30 @@ input
 }
 
 #overlay-preloader {
-	position: relative;
+	position: absolute;
 	top: 0;
 	bottom: 0;
 	height: 100%;
 	width: 100%;
 	background-color: #FFF;
-	z-index: 10;
+	z-index: 9999;
 	padding-top: 20vh;
-	display: block;
-/*	visibility: visible;
-    opacity: 1;*/
+	visibility: visible;
+    opacity: 1;
 }
 #overlay-preloader.hidden {
-	/*visibility: hidden;
+	visibility: hidden;
     opacity: 0;
-    transition: visibility 0s linear 0.5s,opacity 0.5s linear;*/
-    display: none;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
 }
 #overlay-preloader h4 {
 	max-width: 90%;
 }
+.overlay-main {
+	height: calc(100% - (78px + 20vh));
+	position: relative;
+}
+
 * {
 	font-family: 'Fira Sans', sans-serif !important;
 }
@@ -122,11 +125,8 @@ input[type="number"] {
 	color: #616161;
 }
 .waves-effect {
-	position: absolute;
-	z-index: 11;
-    bottom: 20vh;
-    left: 0;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 .sad {
 	font-size: 62px;

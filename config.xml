@@ -50,5 +50,6 @@
   <allow-intent href="tel:*" />
   <allow-intent href="sms:*" />
   <allow-intent href="mailto:*" />
+  <allow-intent href="market://*" />
 
 </widget>

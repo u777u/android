@@ -30,7 +30,6 @@
   <plugin name="onesignal-cordova-plugin" spec="2.3.3" source="npm" />
   <plugin name="cordova-plugin-android-permissions" source="npm" />
   <plugin name="cordova-plugin-android-imei" source="npm" />
-  <plugin name="cordova-plugin-spinnerdialog" source="npm"/>
 
   <access origin="*"/>
 

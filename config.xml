@@ -32,7 +32,6 @@
   <plugin name="cordova-plugin-android-imei" source="npm" />
   <plugin name="cordova-plugin-spinner-dialog" source="npm"/>
 
-
   <access origin="*"/>
 
   <platform name="android">

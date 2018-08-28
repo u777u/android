@@ -210,6 +210,16 @@ i.icon.icon-rate {
 	background-image: url('data:image/svg+xml,<svg%20fill%3D"%23FFFFFF"%20height%3D"24"%20viewBox%3D"0%200%2024%2024"%20width%3D"24"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg">%0A%20%20%20%20<path%20d%3D"M0%200h24v24H0z"%20fill%3D"none"%2F>%0A%20%20%20%20<path%20d%3D"M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z"%2F>%0A<%2Fsvg>');
 }
 
+#wdMin, #wdMax {
+	display: block;
+	padding: 8px;
+	border-radius: 3px;
+	background: #eee;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+}
+
 #picker-lang {
 	width: 100%;
 	border: none;

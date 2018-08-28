@@ -220,8 +220,18 @@
 											<div class="card-header" data-lang="request_withdrawal">Request Withdrawal</div>
 											<div class="card-content">
 												<div class="content-block">
-													<p>
-														<span data-lang="minimum_withdrawal">Minimum withdrawal is</span> <span id="wdMin"></span> DOGE. <span data-lang="maximum_withdrawal">Maximum withdrawal is</span> <span id="wdMax"></span> DOGE.<span data-lang="fee_withdrawal">Withdrawal Fee is adjust by withdrawal level</p>
+													<div class="row">
+														<div class="col-50">
+															<span style="font-size: 12px;">Minimum Withdrawal</span>
+															<span id="wdMin"></span>
+														</div>
+														<div class="col-50">
+															<span style="font-size: 12px;">Maximum Withdrawal</span>
+															<span id="wdMax"></span>
+														</div>
+													</div>
+													<!-- <p>
+														<span data-lang="minimum_withdrawal">Minimum withdrawal is</span> <span id="wdMin"></span> DOGE. <span data-lang="maximum_withdrawal">Maximum withdrawal is</span> <span id="wdMax"></span> DOGE.<span data-lang="fee_withdrawal">Withdrawal Fee is adjust by withdrawal level</p> -->
 												</div>
 												<div class="list-block inputs-list">
 													<ul>
@@ -444,10 +454,8 @@
 		<script src="vendors/qrcode/qrcode.min.js"></script>
 		<script src="vendors/framework7/dist/js/framework7.keypad.min.js"></script>
 		<script src="cordova.js"></script>  
-		<!-- Path to your app js  -->
-<!-- 		<script src="http://192.168.100.9:1337/vorlon.js"></script>
  -->
-<!-- 		<script src="static/js/dom.js"></script>
+		<!-- <script src="static/js/dom.js"></script>
 		<script src="static/js/utilitize.js"></script>
 		<script src="static/js/ajax.js"></script>
 		<script src="static/js/events.js"></script> -->

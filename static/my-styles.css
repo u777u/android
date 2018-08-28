@@ -219,6 +219,15 @@ i.icon.icon-rate {
 	font-weight: bold;
 	text-align: center;
 }
+.withdrawal-description {
+	padding-left: 16px;
+	margin-top: 8px;
+	display: block;
+	font-size: 13px;
+	width: calc(100% - 16px);
+	border-bottom: 1px solid #eee;
+	padding-bottom: 8px;
+}
 
 #picker-lang {
 	width: 100%;
